@@ -60,6 +60,5 @@ means that the maximum input voltage for both modes is now 90V (reason for this 
 It also means that the input impedance of the voltage sense can be increased significantly.  The current input impedance is about 60K, 
 which causes a lot of current to leak in to the sense circuit.  By using an inverting amplifier here, the input impedance may be set to 
 1Mohm by using a 10Mohm feedback resistor 
-The 1V reference is currently being created using a resistor divider, but this may be improved by using a standard 1N400X diode.  These 
-diodes have a 1V drop when saturated, by picking a current limiting resistor that ensures enough current is available to all reference 
-points it can be ensured that there will be no discrepancy in voltage when switching between modes. 
+The 1V reference is currently being created using a resistor divider, but this may be improved by using a TZMC1V0-GS08 zener diode.  These 
+diodes have a 1V Vz.  A resistor will be used to limit the diose current.
