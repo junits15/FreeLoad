@@ -1,0 +1,31 @@
+Application description:
+I would like to create a cost effective electronic load for use in home lab and hobbyist applications.  
+I.	The device should be able to switch between constant current and constant power modes.
+II.	The device should be able to sink 10A of direct current.
+III.	The device should be able to dissipate up to 100W of power.
+IV.	The device should not sink more than 10A of current when in constant power mode.
+V.	The device should be able to handle up to 100VDC in constant current mode.
+VI.	The device should be able to handle up to 50VDC in constant power mode.  
+VII.	The device should be easily adaptable to microcontroller control
+Description and functional:
+	The FreeLoad, herein referred to as “the device” or “the FreeLoad” is a robust, analog, hobbyist grade constant current and constant power electronic load. The device is at its core based around a simple constant current sink shown below:
+Image
+Core:
+Figure 1 shows the core of the device, a single op amp is used to drive an N-channel MOSFET.  Across the drain and source of the FET is the input voltage.  A .05ohm sense resistor is placed between the source and ground.  This resistor will provide current related feedback for the opamp.  The user sets the desired current at the potentiometer, with one extreme correlating to full current and the other extreme correlating to zero current.  The opamp will drive its output until the voltage measured at the sense resistor matches the voltage set at the potentiometer.  An RC filter is used to remove any high pitched frequencies from this current sense signal before they are fed back.  This prevents the circuit from oscillating out of control. 
+	The DC feedback voltage is equal to the input current divided by 20.  Therefore a current of 10A is equal to .5V.  The potentiometer is connected to .5VDC and to ground.  This setup effectively limits the maximum current that the device may draw.
+Constant power:
+	In constant current, the feedback value is a voltage representation of current, so by extension in constant power, the feedback value must be a voltage representation of power.   This is achieved by using the AD633 four quadrant analog multiplier.
+Image
+	A voltage measurement and a current measurement are both fed into the AD633, the result is a factor of power.  This factor of power may then be used for feedback. The input voltage is divided by 6 using a resistor divider and then sent into a buffer amplifier, before being sent into X1 of the 633.  X2 will be grounded.  
+	The current measurement is sent into an noninverting amp with a gain of 2, this result is equal to the input current divided by 10.  This is sent into Y2 of the 633, Y1 is grounded.   The summing input Z is tied to ground, while the output W is sent into an inverting amplifier with a gain of 6.  This effectively undoes the initital division by 6.  Since the 633 automatically divides the output by 10, the output of this amplifier is equal to the power dissipated by the FET and the sense resistor divided by 100.  Or better stated the output of this circuit is power in KW.  
+	This is then fed into the noninverting input of another opamp, on the inverting input is the setting potentiometer.  The potentiometer is allowed to swing from 1V to 0V.  The same filtering circuit is applied to the opamp.  The output of this opamp is fed through a double opamp clipper circuit.  The lower clipping level adjustment is set to 0V, meaning the system is allowed to draw 0A if necessary.  The maximum clipping level is adjustable up to .5V, meaning the maximum current the system is allowed to draw is 10 regardless of the power is meeting the set point or not. 
+	Finally the output of the double clipper is fed into the core constant current sink as the set point.  This operation was chosen as it was exceedingly difficult to remove oscillations while using two switchable feedback loops.  The initial revision of the design used 2 feedback loops that the user would be allowed to switch between. However the time delay caused by the constant power loop made it very difficult to prevent oscillations.  
+	By having two feedback loops, the inner loop is allowed to be much faster to respond than the outer loop.  Therefore the inner loop will stabilize at some value before the oscillation has time to propagate back through the outer, slower, feedback loop.
+Switching between CP and CI:
+	To switch between constant current and constant power modes, the voltage sense is simply removed from the input and switched to a constant 1V reference.  When the input is 1V the power dissipated is equal to the current drawn.  So the power feedback loop now functions as a current feedback loop.  
+
+Issues to be addressed in future revisions:
+	The resistors currently spec’d for generating reverences assume a 12V rail, these MUST be changed to accommodate the new 15V rail, OR a diode reference circuit must be put in their place.  The diode reference circuit should be able to be retrofitted into the existing pads of the resistor divider without any modifications to the circuit board.
+The voltage sense circuit is needlessly complex, it may be simplified and made better by simply using an inverting amplifier with a gain of -1/10.  The Y inputs of the 633 will then be swapped so that current/10 is connected to Y1 and Y2 is connected to GND.  The amplifier on W is then changed so its gain is now -10.  This has two advantages.  Since the input is now being divided by 10 instead of 6, it means that the maximum input voltage for both modes is now 90V (reason for this limitation are discussed further below). 
+It also means that the input impedance of the voltage sense can be increased significantly.  The current input impedance is about 60K, which causes a lot of current to leak in to the sense circuit.  By using an inverting amplifier here, the input impedance may be set to 1Mohm by using a 10Mohm feedback resistor 
+The 1V reference is currently being created using a resistor divider, but this may be improved by using a standard 1N400X diode.  These diodes have a 1V drop when saturated, by picking a current limiting resistor that ensures enough current is available to all reference points it can be ensured that there will be no discrepancy in voltage when switching between modes. 
