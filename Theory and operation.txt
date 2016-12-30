@@ -1,4 +1,4 @@
-Application description:
+Application description: 
 I would like to create a cost effective electronic load for use in home lab and hobbyist applications.  
 I.	The device should be able to switch between constant current and constant power modes.
 II.	The device should be able to sink 10A of direct current.
