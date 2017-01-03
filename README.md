@@ -13,4 +13,5 @@ Future additions to the project may include:
 Constant ressitance mode  
 Battery capacity measurement, with microcontroller control and low voltage cuttoff.   
 Coarse and fine adjustment knobs.  
+Branches exist for both schematic revisions.  
 
