@@ -11,7 +11,7 @@ Description and functional:
 	The FreeLoad, herein referred to as “the device” or “the FreeLoad” is a robust, analog, hobbyist grade constant current and
 	constant power electronic load. The device is at its core based around a simple constant current sink.
 Core:
-Figure 1 shows the core of the device, a single op amp is used to drive an N-channel MOSFET.  Across the drain and source of the FET is 
+A single op amp is used to drive an N-channel MOSFET.  Across the drain and source of the FET is 
 the input voltage.  A .05ohm sense resistor is placed between the source and ground.  This resistor will provide current related 
 feedback for the opamp.  The user sets the desired current at the potentiometer, with one extreme correlating to full current and the 
 other extreme correlating to zero current.  The opamp will drive its output until the voltage measured at the sense resistor matches the 
