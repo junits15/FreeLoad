@@ -9,7 +9,7 @@ The Freeload uses $50 in parts to create excluding the heatsink and PCB.
 The FreeLoad is easily scaled up to dissipate more power, or down to dissipate less power. 
 
 
-Future additions to the project may include:
+Future additions to the project may include:  
 Constant ressitance mode  
 Battery capacity measurement, with microcontroller control and low voltage cuttoff.   
 Coarse and fine adjustment knobs.  
