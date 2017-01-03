@@ -9,8 +9,7 @@ VI.	The device should be able to handle up to 50VDC in constant power mode.
 VII.	The device should be easily adaptable to microcontroller control
 Description and functional:
 	The FreeLoad, herein referred to as “the device” or “the FreeLoad” is a robust, analog, hobbyist grade constant current and
-	constant power electronic load. The device is at its core based around a simple constant current sink shown below:
-Image
+	constant power electronic load. The device is at its core based around a simple constant current sink.
 Core:
 Figure 1 shows the core of the device, a single op amp is used to drive an N-channel MOSFET.  Across the drain and source of the FET is 
 the input voltage.  A .05ohm sense resistor is placed between the source and ground.  This resistor will provide current related 
@@ -23,7 +22,7 @@ potentiometer is connected to .5VDC and to ground.  This setup effectively limit
 Constant power:
 	In constant current, the feedback value is a voltage representation of current, so by extension in constant power, the feedback 
 value must be a voltage representation of power.   This is achieved by using the AD633 four quadrant analog multiplier.
-Image
+
 	A voltage measurement and a current measurement are both fed into the AD633, the result is a factor of power.  This factor of 
 power may then be used for feedback. The input voltage is divided by 6 using a resistor divider and then sent into a buffer amplifier, 
 before being sent into X1 of the 633.  X2 will be grounded.  
