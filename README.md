@@ -10,7 +10,7 @@ The FreeLoad is easily scaled up to dissipate more power, or down to dissipate l
 
 
 Future additions to the project may include:
-Constant ressitance mode
-Battery capacity measurement, with microcontroller control and low voltage cuttoff. 
+Constant ressitance mode  
+Battery capacity measurement, with microcontroller control and low voltage cuttoff.   
 Coarse and fine adjustment knobs.  
 
