@@ -14,6 +14,13 @@ Constant ressitance mode
 Battery capacity measurement, with microcontroller control and low voltage cuttoff.   
 Coarse and fine adjustment knobs.  
 BNC input for current setting.  
+  
+Changes for schematic v1.3  and board v1.2
+-BNC connections for setting and measurement  
+-Switch all IC's to SOIC-8, for reduced board size and cost  
+-Switch to single rail supply
+-Use ADR510 for precision 1V reference instead of resistor dividers
+-decrease board size by at least 25% 
 
 Branches exist for both schematic revisions.  
 
