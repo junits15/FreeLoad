@@ -1,0 +1,37 @@
+Changelog: 
+
+Wachusett: 
+	Featureset 1:
+		>10A max current
+		>100W max power
+		
+			1.1.1.0.1
+			-Single switchable feedback loop system
+			-high input impedance buffer amp
+			
+			1.1.2.1.2
+			-dual simultanious feeedback loop system
+			-increased votlage measurement range with resistor divider sensing
+			-dual mosfets for better dissipation
+			-measurements on pin headers
+			-15W sense resistor
+			-4mm banana input jacks, can also suit machine screws.
+			-CC mode achieved with 1V ref. derived from resistor divider.
+			- +/-12V rails
+			
+	Featureset 2:
+		>higher input impedance
+		>single rail operation
+		>BNC connectors for measurement and control
+		>smaller board size (reduced cost)
+		>Surface mount components (reduced cost and space)
+		>ADR510 precision 1V reference
+		>Consider better fuse options 
+		
+			1.2.3.2.3
+			
+
+
+Haskell:
+Lyman:
+
