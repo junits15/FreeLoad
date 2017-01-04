@@ -5,7 +5,7 @@ The FreeLoad is born out of nessecity, I was in search of a dummy load design th
 The FreeLoad is robust and has no processor to lock up.
 The FreeLoad is linear, a typical solution to create a constant power load is to attach a load to a switching boost converter. By using MOSFETs to dissipate power the FreeLoad appears as a purely resistive load to the source. This eliminates artifacts or strange behavior caused by switching noise.
 The Freeload uses $50 in parts (excl. heatsink and PCB.) The FreeLoad is easily scaled up to dissipate more power, or down to dissipate less power.
-
+---------------------------------------------------------------------------------------------------------------------------------------
 Future additions:  
 Constant ressitance mode  
 Battery capacity measurement, with microcontroller control and low voltage cuttoff.   
