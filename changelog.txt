@@ -10,6 +10,7 @@ Wachusett:
 			-high input impedance buffer amp
 			
 			1.1.2.1.2
+			Changes:
 			-dual simultanious feeedback loop system
 			-increased votlage measurement range with resistor divider sensing
 			-dual mosfets for better dissipation
