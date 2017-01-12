@@ -32,7 +32,7 @@ Wachusett:
 				- 4 wire sense
 				- precision votlage references
 				- fix ground plane
-				- fix constant power
+				- fix constant current
 			
 	Featureset 2:
 		>higher input impedance
