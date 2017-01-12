@@ -5,7 +5,7 @@ Wachusett:
 		>10A max current
 		>100W max power
 		
-			1.1.1.0.1
+			1.1.1.0.1 (never produced, never laid out)
 			-Single switchable feedback loop system
 			-high input impedance buffer amp
 			
