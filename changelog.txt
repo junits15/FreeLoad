@@ -36,13 +36,13 @@ Wachusett:
 			
 	Featureset 2:
 		>higher input impedance
-		>single rail operation
 		>BNC connectors for measurement and control
 		>smaller board size (reduced cost)
 		>Surface mount components (reduced cost and space)
 		>ADR510 precision 1V reference
-		>Consider better fuse options 
-		>4 wire sense
+		>half wave rectification
+		>+/- 15V rails (increased voltage input range)
+		>4 wire sense (eliminates error from voltage drop in wires)
 		
 			1.2.3.2.3
 			
