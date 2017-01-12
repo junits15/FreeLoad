@@ -41,6 +41,7 @@ Wachusett:
 		>Surface mount components (reduced cost and space)
 		>ADR510 precision 1V reference
 		>Consider better fuse options 
+		>4 wire sense
 		
 			1.2.3.2.3
 			
