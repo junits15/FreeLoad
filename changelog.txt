@@ -25,9 +25,9 @@ Wachusett:
 			- Issues encounered:
 				- "Islands" in the ground plane causing issues, this can be temporarily fixed with jumper wires
 				- resistor dividers change impedance when pot is turned, causing voltage swings that are incorrect
-				- resistor dividers are simply not precise enough, Ex: Input current was limited to 8A due to .4V coming 				 from resistor divider instead of .5.
+				- resistor dividers are simply not precise enough, Ex: Input current was limited to 8A due to .4V coming from resistor divider instead of .5.
 				- Constant current mode does not work (may be caused by resistor dividers)
-				- lack of 4 wire sense causes signifigant error in power calculations, power is constant but off due to 				voltage drop in wires.
+				- lack of 4 wire sense causes signifigant error in power calculations, power is constant but off due to voltage drop in wires.
 			- Changes for next revision:
 				- 4 wire sense
 				- precision votlage references
