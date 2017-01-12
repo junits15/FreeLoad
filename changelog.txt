@@ -9,7 +9,7 @@ Wachusett:
 			-Single switchable feedback loop system
 			-high input impedance buffer amp
 			
-			1.1.2.1.2
+			1.1.2.1.2 (sent to production)
 			Changes:
 			-dual simultanious feeedback loop system
 			-increased votlage measurement range with resistor divider sensing
@@ -44,10 +44,25 @@ Wachusett:
 		>+/- 15V rails (increased voltage input range)
 		>4 wire sense (eliminates error from voltage drop in wires)
 		
-			1.2.3.2.3
+			1.2.3.2.3 (sent to production)
+			Changes:
+			-opamps, resistors, and 633 switched to surface mount
+			-power supply switched to +/- 15VDC
+			-half wave AC recitification eliminates CT transformer
+			-precision 1V reference added
+			-BNC's added
+			-input impedance upped to 100k Ohms form 60k
+			-added footprints for 4xTO-220 FET's and 4xTO-247 FET's
+			-board shrunk to 10cmx10cm (reduced cost to $10 + S&H from $30 + S&H)
 			
 
 
 Haskell:
+	Featureset 1:
+	>onboard gauges for measurement of parameters
+	>single DC input to switch mode rail splitter or descrete opamp rail splitter
+	>temp controlled fan
 Lyman:
-
+	Featureset 1:
+	>case allowing the use of BNC's and electronics gauges
+	>standard DC input
