@@ -55,6 +55,23 @@ Wachusett:
 			-added footprints for 4xTO-220 FET's and 4xTO-247 FET's
 			-board shrunk to 10cmx10cm (reduced cost to $10 + S&H from $30 + S&H)
 			
+		Prototype issues:
+		-issues encountered
+			-voltage measuremnt was wired in reverse, fixed temprarily with mod wires.
+			-sense resistor is difficult to mount with a screw
+			- -1.8W of error, causes load to draw 1.8W when set to 0W
+			-BNC footprints are incorrect
+			-input cap (C7) for clipper needs to be a short
+			-switch for CC mode should be between the second feedback loop and the clipper switching to 1V reference for more precision and ease of construction
+			-error in voltage measurement and power calculations because of imprecise resistor values
+		
+		-changes for next revision
+			-high tolerance resistors
+			-trimmers to remove error in power measurement 
+			-re-make BNC footprints
+			-remove C7 replace with short
+			new switch location for CC mode
+			
 
 
 Haskell:
